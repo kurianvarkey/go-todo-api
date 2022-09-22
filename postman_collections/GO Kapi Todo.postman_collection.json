@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "f7b5ef08-0650-416b-a483-31055e7d14fd",
+		"name": "GO Kapi Todo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14370604"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4040/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddTodo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"user_id\":1,\r\n\"title\":\"Test title\",\r\n\"description\":\"Description\",\r\n\"task_date\":\"2022-09-18\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4040/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllTodos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4040/todos?from_date=&to_date=&search_title=&search_is_completed&page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"todos"
+					],
+					"query": [
+						{
+							"key": "from_date",
+							"value": ""
+						},
+						{
+							"key": "to_date",
+							"value": ""
+						},
+						{
+							"key": "search_title",
+							"value": ""
+						},
+						{
+							"key": "search_is_completed",
+							"value": null
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateTodo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"user_id\":1,\r\n\"title\":\"Test title Updated\",\r\n\"description\":\"Description Updated\",\r\n\"task_date\":\"2022-09-02\",\r\n\"completed_date\":\"2022-09-18 15:11:25\",\r\n\"is_completed\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4040/todos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"todos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTodo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4040/todos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"todos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTodo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4040/todos/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"todos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
