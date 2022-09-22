@@ -1,5 +1,7 @@
+*.env
 *.env_sample
 *.log
+src/*.env
 src/*.env_sample
 src/*.env_test
 src/tests/*.env_test
